@@ -60,7 +60,7 @@ class _NotesCardState extends State<NotesCard> {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                "Finetune Stable Diffusion with Dreambooth",
+                widget.title,
                 style: kEpilogueTextStyle(
                   context,
                 ).copyWith(

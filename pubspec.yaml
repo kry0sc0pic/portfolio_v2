@@ -30,14 +30,13 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   day_night_themed_switch: ^1.0.0
-  dot_navigation_bar: ^1.0.2
+  flutter_phosphor_icons: 0.0.1+6
+  timeline_tile: ^2.0.0
   flutter:
     sdk: flutter
   google_fonts: ^5.1.0
-  posa_bottom_bar: ^0.0.3
   random_text_reveal: ^0.0.6
   theme_provider: ^0.6.0
-  translucent_navigation_bar: ^1.0.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -55,6 +54,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/placeholder.jpg
+    - assets/let_him_cook.gif
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

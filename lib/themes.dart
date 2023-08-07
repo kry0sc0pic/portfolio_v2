@@ -40,3 +40,11 @@ TextStyle kNeonFutureTextStyle(BuildContext context, {double opacity = 1.0}) {
   };
   return themeFontMap[ThemeProvider.themeOf(context).id]!;
 }
+
+Color kWhiteBlackAccentByTheme(BuildContext context, {double opacity = 1.0}) {
+  final themeColorMap = {
+    'day': Colors.black.withOpacity(opacity),
+    'night': Colors.white.withOpacity(opacity),
+  };
+  return themeColorMap[ThemeProvider.themeOf(context).id]!;
+}
