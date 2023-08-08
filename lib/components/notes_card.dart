@@ -53,7 +53,7 @@ class _NotesCardState extends State<NotesCard> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [NoteTag(text: 'AI/ML')],
             ),
@@ -61,7 +61,7 @@ class _NotesCardState extends State<NotesCard> {
               alignment: Alignment.centerLeft,
               child: Text(
                 widget.title,
-                style: kEpilogueTextStyle(
+                style: kManropeTextStyle(
                   context,
                 ).copyWith(
                     fontWeight: FontWeight.bold,

@@ -31,6 +31,16 @@ TextStyle kSpaceMonoTextStyle(BuildContext context, {double opacity = 1.0}) {
   return themeFontMap[ThemeProvider.themeOf(context).id]!;
 }
 
+TextStyle kManropeTextStyle(BuildContext context, {double opacity = 1.0}) {
+  final themeFontMap = {
+    'day': GoogleFonts.manrope(
+        color: Colors.black.withOpacity(opacity), letterSpacing: 1),
+    'night': GoogleFonts.manrope(
+        color: Colors.white.withOpacity(opacity), letterSpacing: 1),
+  };
+  return themeFontMap[ThemeProvider.themeOf(context).id]!;
+}
+
 TextStyle kNeonFutureTextStyle(BuildContext context, {double opacity = 1.0}) {
   final themeFontMap = {
     'day': TextStyle(

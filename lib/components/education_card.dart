@@ -6,9 +6,16 @@ import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import '../models/education.dart';
 import '../themes.dart';
 
-class EducationCard extends StatelessWidget {
+class EducationCard extends StatefulWidget {
   const EducationCard({super.key, required this.education});
   final Education education;
+
+  @override
+  State<EducationCard> createState() => _EducationCardState();
+}
+
+class _EducationCardState extends State<EducationCard> {
+  bool isHovering = false;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -18,25 +25,26 @@ class EducationCard extends StatelessWidget {
         tileColor: kWhiteBlackAccentByTheme(context, opacity: 0.15),
         shape: RoundedRectangleBorder(
           side: BorderSide(
-              color: (education.isCompleted
+              color: (widget.education.isCompleted
                       ? Colors.greenAccent
                       : Colors.blueAccent)
                   .withOpacity(1),
               width: 2),
           borderRadius: BorderRadius.circular(20),
         ),
-        trailing: Text(education.year.toString(),
+        trailing: Text(widget.education.year.toString(),
             style: kSpaceMonoTextStyle(context)
                 .copyWith(fontWeight: FontWeight.bold)),
-        title: Text(education.name,
-            style: kEpilogueTextStyle(context)
+        title: Text(widget.education.name,
+            style: kManropeTextStyle(context)
                 .copyWith(fontWeight: FontWeight.bold, letterSpacing: 0.2)),
         visualDensity: VisualDensity.comfortable,
-        subtitle: Text(education.degree,
-            style: kEpilogueTextStyle(context, opacity: 0.7)),
+        subtitle: Text(widget.education.degree,
+            style: kManropeTextStyle(context, opacity: 0.7)),
         leading: CircleAvatar(
-          backgroundColor:
-              education.isCompleted ? Colors.greenAccent : Colors.blueAccent,
+          backgroundColor: widget.education.isCompleted
+              ? Colors.greenAccent
+              : Colors.blueAccent,
           child: Icon(
             PhosphorIcons.buildings,
             color: kWhiteBlackAccentByTheme(context),
