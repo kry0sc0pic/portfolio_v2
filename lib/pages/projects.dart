@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio2/models/project.dart';
 
-import '../components/notes_card.dart';
+import '../components/end_spacer.dart';
 import '../components/project_card.dart';
 import '../components/simple_page_header.dart';
 
@@ -31,14 +31,14 @@ class _ProjectsPageState extends State<ProjectsPage> {
               ProjectCard(
                 project: Project(
                     name: "OpenDex",
-                    image: '',
                     description: "ChatGPT for Pokemon.",
+                    image: 'assets/opendex.png',
                     tag: "GenAI"),
               ),
               ProjectCard(
                 project: Project(
                     name: "Knox",
-                    image: '',
+                    image: 'assets/knox.png',
                     description:
                         "Contactless Payment App powered by Quantum Key Distribution.",
                     tag: "Quantum"),
@@ -46,21 +46,49 @@ class _ProjectsPageState extends State<ProjectsPage> {
               ProjectCard(
                 project: Project(
                     name: "Alkyne",
-                    image: '',
+                    image: 'assets/alkyne.png',
                     description:
                         "App to help students with chemistry conversion problems.",
                     tag: "Chemistry"),
               ),
               ProjectCard(
                 project: Project(
+                    name: "God's Eye",
+                    image: 'assets/godseye.png',
+                    awardCount: 3,
+                    description:
+                        "Identifies counterfeit vehicles and notifies law enforcement in realtime.",
+                    tag: "Computer Vision"),
+              ),
+              ProjectCard(
+                project: Project(
                     name: "Cypher",
-                    image: '',
+                    image: 'assets/cypher.png',
                     description:
                         "Discord bot to see which friends are online on Valorant.",
                     tag: "Discord Bot"),
               ),
+              ProjectCard(
+                project: Project(
+                    name: "MaskUp!",
+                    awardCount: 1,
+                    image: 'assets/maskup.png',
+                    description:
+                        "App to identify people not wearing masks and warn them.",
+                    tag: "Computer Vision"),
+              ),
+              ProjectCard(
+                project: Project(
+                    name: "SeWA App",
+                    awardCount: 1,
+                    image: 'assets/sewa.png',
+                    description:
+                        "App to help people dispose their eWaste safely from home.",
+                    tag: "ITFest '21"),
+              ),
               //TODO: add more
-            ])
+            ]),
+        const PageEndSpacer()
       ],
     ));
   }

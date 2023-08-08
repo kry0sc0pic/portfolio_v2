@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio2/themes.dart';
 
+import '../components/end_spacer.dart';
+
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
@@ -78,7 +80,8 @@ class ProfilePage extends StatelessWidget {
             child: Image.asset(
               'assets/let_him_cook.gif',
               fit: BoxFit.cover,
-            ))
+            )),
+        const PageEndSpacer()
       ]),
     );
   }

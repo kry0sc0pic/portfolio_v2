@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/project.dart';
 import '../themes.dart';
+import 'award_tag.dart';
 import 'note_tag.dart';
 
 class ProjectCard extends StatefulWidget {
@@ -44,20 +45,28 @@ class _ProjectCardState extends State<ProjectCard> {
                     : Colors.transparent,
                 width: 1.5),
             image: DecorationImage(
-              image: AssetImage('assets/placeholder.jpg'),
-              fit: BoxFit.cover,
-              colorFilter: !isHovering
-                  ? ColorFilter.mode(
-                      Colors.black.withOpacity(0.5), BlendMode.darken)
-                  : null,
-            ),
+                image: AssetImage(
+                    widget.project.image ?? 'assets/placeholder.jpg'),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                    Colors.black.withOpacity(!isHovering ? 0.5 : 0.25),
+                    BlendMode.darken)),
             color: Colors.black),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: [NoteTag(text: widget.project.tag)],
+              children: [
+                if (widget.project.awardCount != 0)
+                  Padding(
+                    padding: EdgeInsets.only(right: 8.0),
+                    child: AwardTag(
+                      awardCount: widget.project.awardCount,
+                    ),
+                  ),
+                NoteTag(text: widget.project.tag)
+              ],
             ),
             Column(
               mainAxisSize: MainAxisSize.min,

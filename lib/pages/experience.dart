@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../components/end_spacer.dart';
 import '../components/notes_card.dart';
 import '../components/simple_page_header.dart';
 
@@ -20,6 +21,7 @@ class _ExperiencePageState extends State<ExperiencePage> {
           title: 'experience',
           subtitle: 'places i have worked at.',
         ),
+        PageEndSpacer(),
       ],
     ));
   }

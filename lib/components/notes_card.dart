@@ -42,13 +42,11 @@ class _NotesCardState extends State<NotesCard> {
                     : Colors.transparent,
                 width: 1.5),
             image: DecorationImage(
-              image: AssetImage('assets/placeholder.jpg'),
-              fit: BoxFit.cover,
-              colorFilter: !isHovering
-                  ? ColorFilter.mode(
-                      Colors.black.withOpacity(0.5), BlendMode.darken)
-                  : null,
-            ),
+                image: AssetImage('assets/placeholder.jpg'),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                    Colors.black.withOpacity(!isHovering ? 0.5 : 0.25),
+                    BlendMode.darken)),
             color: Colors.black),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

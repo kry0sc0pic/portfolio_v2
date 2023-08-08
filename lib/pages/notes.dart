@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../components/end_spacer.dart';
 import '../components/notes_card.dart';
 import '../components/simple_page_header.dart';
 
@@ -28,7 +29,8 @@ class _NotesPageState extends State<NotesPage> {
           children: [
             NotesCard(title: 'Finetune Stable Diffusion with Dreambooth'),
           ],
-        )
+        ),
+        PageEndSpacer()
       ],
     ));
   }

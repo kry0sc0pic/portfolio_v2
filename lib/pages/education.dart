@@ -7,6 +7,7 @@ import 'package:portfolio2/themes.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 import '../components/education_card.dart';
+import '../components/end_spacer.dart';
 import '../components/notes_card.dart';
 import '../components/simple_page_header.dart';
 
@@ -83,6 +84,7 @@ class _EducationPageState extends State<EducationPage> {
               year: 2023,
               completed: true),
         ),
+        const PageEndSpacer()
       ],
     ));
   }

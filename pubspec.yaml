@@ -55,6 +55,14 @@ flutter:
   assets:
     - assets/placeholder.jpg
     - assets/let_him_cook.gif
+    - assets/cypher.png
+    - assets/opendex.png
+    - assets/alkyne.png
+    - assets/knox.png
+    - assets/maskup2.png
+    - assets/sewa.png
+    - assets/maskup.png
+    - assets/godseye.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
