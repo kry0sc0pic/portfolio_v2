@@ -1,12 +1,18 @@
-import 'package:portfolio2/models/position.dart';
+import 'dart:ui';
 
 class Experience {
   const Experience(
       {required this.companyName,
-      required this.companyPicture,
-      required this.positions});
+      required this.role,
+      this.companyPicture,
+      required this.duration,
+      required this.color,
+      this.isCompleted = false});
 
   final String companyName;
-  final String companyPicture;
-  final List<Position> positions;
+  final String? companyPicture;
+  final String role;
+  final bool isCompleted;
+  final String duration;
+  final Color color;
 }

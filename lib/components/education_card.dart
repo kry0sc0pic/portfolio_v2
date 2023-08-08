@@ -29,7 +29,7 @@ class _EducationCardState extends State<EducationCard> {
                       ? Colors.greenAccent
                       : Colors.blueAccent)
                   .withOpacity(1),
-              width: 2),
+              width: 4),
           borderRadius: BorderRadius.circular(20),
         ),
         trailing: Text(widget.education.year.toString(),

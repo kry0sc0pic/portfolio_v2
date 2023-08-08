@@ -28,6 +28,7 @@ TextStyle kSpaceMonoTextStyle(BuildContext context, {double opacity = 1.0}) {
     'day': GoogleFonts.spaceMono(color: Colors.black.withOpacity(opacity)),
     'night': GoogleFonts.spaceMono(color: Colors.white.withOpacity(opacity)),
   };
+
   return themeFontMap[ThemeProvider.themeOf(context).id]!;
 }
 
@@ -51,10 +52,17 @@ TextStyle kNeonFutureTextStyle(BuildContext context, {double opacity = 1.0}) {
   return themeFontMap[ThemeProvider.themeOf(context).id]!;
 }
 
-Color kWhiteBlackAccentByTheme(BuildContext context, {double opacity = 1.0}) {
+Color kWhiteBlackAccentByTheme(BuildContext context,
+    {double opacity = 1.0, bool invert = false}) {
   final themeColorMap = {
     'day': Colors.black.withOpacity(opacity),
     'night': Colors.white.withOpacity(opacity),
   };
+  if (invert) {
+    if (ThemeProvider.themeOf(context).id == 'day')
+      return themeColorMap['night']!;
+    else
+      return themeColorMap['day']!;
+  }
   return themeColorMap[ThemeProvider.themeOf(context).id]!;
 }
