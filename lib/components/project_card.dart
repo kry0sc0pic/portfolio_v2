@@ -33,7 +33,7 @@ class _ProjectCardState extends State<ProjectCard> {
       child: Container(
         width: 533.25,
         height: 300,
-        padding: EdgeInsets.all(
+        padding: const EdgeInsets.all(
           12,
         ),
         decoration: BoxDecoration(
@@ -60,7 +60,7 @@ class _ProjectCardState extends State<ProjectCard> {
               children: [
                 if (widget.project.awardCount != 0)
                   Padding(
-                    padding: EdgeInsets.only(right: 8.0),
+                    padding: const EdgeInsets.only(right: 8.0),
                     child: AwardTag(
                       awardCount: widget.project.awardCount,
                     ),

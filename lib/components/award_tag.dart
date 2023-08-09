@@ -11,15 +11,15 @@ class AwardTag extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.2),
             borderRadius: BorderRadius.circular(32)),
-        padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
         child: Row(
           children: [
-            Icon(
+            const Icon(
               PhosphorIcons.trophy_fill,
               color: Colors.yellowAccent,
               size: 20,
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Text(

@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import 'package:portfolio2/components/experience_card.dart';
 import 'package:portfolio2/models/experience.dart';
 import 'package:portfolio2/themes.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
-import '../components/education_card.dart';
 import '../components/end_spacer.dart';
-import '../components/notes_card.dart';
 import '../components/simple_page_header.dart';
-import '../models/education.dart';
 
 class ExperiencePage extends StatefulWidget {
   const ExperiencePage({Key? key}) : super(key: key);
@@ -38,39 +34,41 @@ class _ExperiencePageState extends State<ExperiencePage> {
             width: 40,
             iconStyle: IconStyle(
               color: kWhiteBlackAccentByTheme(context, invert: true),
-              iconData: Icons.star_rounded,
+              iconData: Icons.star_outline_rounded,
             ),
           ),
           isFirst: true,
         ),
         ExperienceCard(
           borderOverride: kWhiteBlackAccentByTheme(context),
-          experience: Experience(
+          experience: const Experience(
               color: Color(0xFF2a2a2a),
               companyName: 'Gradium',
-              duration: '1 mo',
+              duration: 'Jul 2023 - Today',
               companyPicture: 'assets/gradium.png',
               role: 'Founder & Tech Guy'),
         ),
         TimelineTile(
           alignment: TimelineAlign.center,
           hasIndicator: false,
-          beforeLineStyle: const LineStyle(color: Color(0xFF585DFF)),
+          beforeLineStyle: const LineStyle(color: Color(0xffF157FF)),
         ),
         const ExperienceCard(
+          gradient:
+              LinearGradient(colors: [Color(0xFF585DFF), Color(0xffF157FF)]),
           experience: Experience(
-              color: Color(0xFF585DFF),
+              color: Color(0xffF157FF),
               companyName: 'Classify',
-              duration: '7 mo',
+              duration: 'Dec 2022 - Today',
               companyPicture: 'assets/classify.png',
               role: 'Development Lead'),
         ),
         TimelineTile(
           alignment: TimelineAlign.center,
           hasIndicator: true,
-          beforeLineStyle: const LineStyle(color: Color(0xFF585DFF)),
+          beforeLineStyle: const LineStyle(color: Color(0xffF157FF)),
           indicatorStyle: IndicatorStyle(
-            color: Color(0xFF585DFF),
+            color: const Color(0xffF157FF),
             height: 40,
             width: 40,
             iconStyle: IconStyle(
@@ -80,9 +78,11 @@ class _ExperiencePageState extends State<ExperiencePage> {
           ),
         ),
         const ExperienceCard(
+          gradient:
+              LinearGradient(colors: [Color(0xFF585DFF), Color(0xffF157FF)]),
           experience: Experience(
-              color: Color(0xFF585DFF),
-              duration: '9 mo',
+              color: Color(0xffF157FF),
+              duration: 'Apr - Dec 2022',
               companyName: 'Classify',
               companyPicture: 'assets/classify.png',
               role: 'Flutter Developer'),
@@ -90,24 +90,25 @@ class _ExperiencePageState extends State<ExperiencePage> {
         TimelineTile(
           alignment: TimelineAlign.center,
           hasIndicator: true,
-          beforeLineStyle: const LineStyle(color: Color(0xFF585DFF)),
-          afterLineStyle: const LineStyle(color: Colors.blueAccent),
+          beforeLineStyle: const LineStyle(color: Color(0xFF7555B9)),
+          afterLineStyle: const LineStyle(color: Color(0xFF7555B9)),
           indicatorStyle: IndicatorStyle(
-            color: Colors.blueAccent,
+            color: const Color(0xFF7555B9),
             height: 35,
             width: 35,
             iconStyle: IconStyle(
               color: Colors.white,
-              iconData: Icons.check,
+              iconData: Icons.check_circle_outline_rounded,
             ),
           ),
         ),
         const ExperienceCard(
+          borderOverride: Color(0xFF7555B9),
           experience: Experience(
-              color: Colors.blueAccent,
-              duration: '3 mo',
+              color: Colors.white,
+              duration: 'Apr - Jun 2018',
               companyName: 'Witblox',
-              companyPicture: 'assets/classify.png',
+              companyPicture: 'assets/witblox.png',
               role: 'Content Creation Intern'),
         ),
         const PageEndSpacer(),

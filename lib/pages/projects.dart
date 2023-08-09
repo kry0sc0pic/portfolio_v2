@@ -30,6 +30,14 @@ class _ProjectsPageState extends State<ProjectsPage> {
             children: [
               ProjectCard(
                 project: Project(
+                    name: "Mercurius (WIP)",
+                    description:
+                        "CLI Tool which saves time by notifying you when commands finish.",
+                    image: 'assets/mercurius.png',
+                    tag: "Productivity"),
+              ),
+              ProjectCard(
+                project: Project(
                     name: "OpenDex",
                     description: "ChatGPT for Pokemon.",
                     image: 'assets/opendex.png',
@@ -53,7 +61,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
               ),
               ProjectCard(
                 project: Project(
-                    name: "God's Eye",
+                    name: "God's Eye (Patent Pending)",
                     image: 'assets/godseye.png',
                     awardCount: 3,
                     description:
@@ -86,7 +94,6 @@ class _ProjectsPageState extends State<ProjectsPage> {
                         "App to help people dispose their eWaste safely from home.",
                     tag: "ITFest '21"),
               ),
-              //TODO: add more
             ]),
         const PageEndSpacer()
       ],

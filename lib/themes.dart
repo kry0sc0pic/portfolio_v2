@@ -59,10 +59,11 @@ Color kWhiteBlackAccentByTheme(BuildContext context,
     'night': Colors.white.withOpacity(opacity),
   };
   if (invert) {
-    if (ThemeProvider.themeOf(context).id == 'day')
+    if (ThemeProvider.themeOf(context).id == 'day') {
       return themeColorMap['night']!;
-    else
+    } else {
       return themeColorMap['day']!;
+    }
   }
   return themeColorMap[ThemeProvider.themeOf(context).id]!;
 }

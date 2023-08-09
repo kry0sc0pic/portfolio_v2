@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 
@@ -7,8 +5,14 @@ import '../models/education.dart';
 import '../themes.dart';
 
 class EducationCard extends StatefulWidget {
-  const EducationCard({super.key, required this.education});
+  const EducationCard(
+      {super.key,
+      required this.education,
+      this.borderOverride,
+      this.iconColorOverride});
   final Education education;
+  final Color? borderOverride;
+  final Color? iconColorOverride;
 
   @override
   State<EducationCard> createState() => _EducationCardState();
@@ -21,13 +25,12 @@ class _EducationCardState extends State<EducationCard> {
     return SizedBox(
       width: 500,
       child: ListTile(
-        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         tileColor: kWhiteBlackAccentByTheme(context, opacity: 0.15),
         shape: RoundedRectangleBorder(
           side: BorderSide(
-              color: (widget.education.isCompleted
-                      ? Colors.greenAccent
-                      : Colors.blueAccent)
+              color: (widget.borderOverride ?? widget.education.color)
                   .withOpacity(1),
               width: 4),
           borderRadius: BorderRadius.circular(20),
@@ -42,13 +45,19 @@ class _EducationCardState extends State<EducationCard> {
         subtitle: Text(widget.education.degree,
             style: kManropeTextStyle(context, opacity: 0.7)),
         leading: CircleAvatar(
-          backgroundColor: widget.education.isCompleted
-              ? Colors.greenAccent
-              : Colors.blueAccent,
-          child: Icon(
-            PhosphorIcons.buildings,
-            color: kWhiteBlackAccentByTheme(context),
-          ),
+          backgroundColor: widget.education.color,
+          child: widget.education.image == null
+              ? Icon(
+                  PhosphorIcons.buildings,
+                  color: (widget.iconColorOverride ??
+                          kWhiteBlackAccentByTheme(context))
+                      .withOpacity(1),
+                )
+              : Image.asset(
+                  widget.education.image!,
+                  width: 25,
+                  height: 25,
+                ),
           // foregroundImage: Ass,
         ),
       ),

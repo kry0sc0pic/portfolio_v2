@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:day_night_themed_switch/day_night_themed_switch.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio2/components/social_icon.dart';
+import 'package:portfolio2/links.dart';
 import 'package:portfolio2/pages/education.dart';
 import 'package:portfolio2/pages/experience.dart';
 import 'package:portfolio2/pages/notes.dart';
@@ -120,6 +122,48 @@ class _ContainerPageState extends State<ContainerPage> {
               controller: _pageController,
               physics: const NeverScrollableScrollPhysics(),
               children: _pages,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(5000),
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                    child: Container(
+                      color: kWhiteBlackAccentByTheme(context, opacity: 0.15),
+                      height: 300,
+                      width: 50,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SocialIcon(
+                            link: SocialLinks.twitter,
+                            icon: PhosphorIcons.twitter_logo,
+                          ),
+                          SocialIcon(
+                            link: SocialLinks.linkedin,
+                            icon: PhosphorIcons.linkedin_logo,
+                          ),
+                          SocialIcon(
+                            link: SocialLinks.github,
+                            icon: PhosphorIcons.github_logo,
+                          ),
+                          SocialIcon(
+                            link: SocialLinks.youtube,
+                            icon: PhosphorIcons.youtube_logo,
+                          ),
+                          SocialIcon(
+                            link: SocialLinks.email,
+                            icon: PhosphorIcons.envelope_simple,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ),
             Align(
               alignment: Alignment.bottomCenter,

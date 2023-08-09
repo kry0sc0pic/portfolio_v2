@@ -65,13 +65,13 @@ class ProfilePage extends StatelessWidget {
         //   const SizedBox(
         //     height: 20,
         //   ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Text("Website is cooking 🍳",
             style: kEpilogueTextStyle(context)
                 .copyWith(fontSize: 20, fontWeight: FontWeight.bold)),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
 

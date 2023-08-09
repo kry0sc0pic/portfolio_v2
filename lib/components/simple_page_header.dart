@@ -14,13 +14,13 @@ class SimplePageHeader extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 100,
         ),
         Text(title,
             style: kEpilogueTextStyle(context)
                 .copyWith(fontSize: 40, fontWeight: FontWeight.bold)),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Text(
@@ -28,7 +28,7 @@ class SimplePageHeader extends StatelessWidget {
           style:
               kEpilogueTextStyle(context, opacity: 0.5).copyWith(fontSize: 24),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
       ],

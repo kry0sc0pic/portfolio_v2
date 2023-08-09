@@ -27,7 +27,10 @@ class _NotesPageState extends State<NotesPage> {
           spacing: 20,
           runSpacing: 20,
           children: [
-            NotesCard(title: 'Finetune Stable Diffusion with Dreambooth'),
+            NotesCard(
+                title: 'Finetune Stable Diffusion with Dreambooth',
+                tag: 'AI/ML',
+                image: 'assets/finetuning_with_stable_diffusion.png'),
           ],
         ),
         PageEndSpacer()

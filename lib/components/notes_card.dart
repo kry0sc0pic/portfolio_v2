@@ -4,9 +4,10 @@ import '../themes.dart';
 import 'note_tag.dart';
 
 class NotesCard extends StatefulWidget {
-  const NotesCard({super.key, required this.title});
+  const NotesCard({super.key, required this.title, this.tag, this.image});
   final String title;
-
+  final String? tag;
+  final String? image;
   @override
   State<NotesCard> createState() => _NotesCardState();
 }
@@ -30,7 +31,7 @@ class _NotesCardState extends State<NotesCard> {
       child: Container(
         width: 355.5,
         height: 200,
-        padding: EdgeInsets.all(
+        padding: const EdgeInsets.all(
           12,
         ),
         decoration: BoxDecoration(
@@ -42,7 +43,7 @@ class _NotesCardState extends State<NotesCard> {
                     : Colors.transparent,
                 width: 1.5),
             image: DecorationImage(
-                image: AssetImage('assets/placeholder.jpg'),
+                image: AssetImage(widget.image ?? 'assets/placeholder.jpg'),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                     Colors.black.withOpacity(!isHovering ? 0.5 : 0.25),
@@ -51,10 +52,13 @@ class _NotesCardState extends State<NotesCard> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [NoteTag(text: 'AI/ML')],
-            ),
+            if (widget.tag != null)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [NoteTag(text: widget.tag!)],
+              )
+            else
+              const SizedBox.shrink(),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(

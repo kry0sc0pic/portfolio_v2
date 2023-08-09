@@ -30,13 +30,14 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   day_night_themed_switch: ^1.0.0
-  flutter_phosphor_icons: 0.0.1+6
-  timeline_tile: ^2.0.0
   flutter:
     sdk: flutter
+  flutter_phosphor_icons: 0.0.1+6
   google_fonts: ^5.1.0
   random_text_reveal: ^0.0.6
   theme_provider: ^0.6.0
+  timeline_tile: ^2.0.0
+  url_launcher: ^6.1.12
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -65,6 +66,12 @@ flutter:
     - assets/godseye.png
     - assets/classify.png
     - assets/gradium.png
+    - assets/witblox.png
+    - assets/dps.png
+    - assets/rait.jpg
+    - assets/iit.png
+    - assets/mercurius.png
+    - assets/finetuning_with_stable_diffusion.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
@@ -96,3 +103,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_native_splash:
+  web: true
+  android: false
+  ios: false
+  color: "#404258"
+  branding: "web/icons/icon.png"
+  branding_mode: center

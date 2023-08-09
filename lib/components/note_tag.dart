@@ -12,7 +12,7 @@ class NoteTag extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.2),
           borderRadius: BorderRadius.circular(32)),
-      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       child: Text(
         text,
         style: kSpaceMonoTextStyle(context)
