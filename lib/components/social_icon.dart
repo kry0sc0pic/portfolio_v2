@@ -16,8 +16,7 @@ class SocialIcon extends StatelessWidget {
 
     return GestureDetector(
       onTap: () async {
-        bool launchable = await canLaunchUrl(uri);
-        if (launchable) await launchUrl(uri, webOnlyWindowName: '_blank');
+        await launchUrl(uri, webOnlyWindowName: '_blank');
       },
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
