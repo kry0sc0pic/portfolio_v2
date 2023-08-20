@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio2/themes.dart';
+import 'package:stroke_text/stroke_text.dart';
 
 import '../components/end_spacer.dart';
 
@@ -13,7 +14,7 @@ class ProfilePage extends StatelessWidget {
         const SizedBox(
           height: 100,
         ),
-        Text("hi 🖖, I'm Krishaay",
+        Text("hi 👋, I'm Krishaay",
             style: kEpilogueTextStyle(context)
                 .copyWith(fontSize: 40, fontWeight: FontWeight.bold)),
         //   Row(
@@ -68,19 +69,172 @@ class ProfilePage extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        Text("Website is cooking 🍳",
+        // Text("Website is cooking 🍳",
+        //     style: kEpilogueTextStyle(context)
+        //         .copyWith(fontSize: 20, fontWeight: FontWeight.bold)),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            StrokeText(
+          text: "I'm a ",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.white.withOpacity(0),
+          strokeWidth: 1.5,
+        ),
+        StrokeText(
+          text: "Content Creator",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.redAccent,
+          strokeWidth: 1.5,
+        ),
+          ],
+        ),
+        SizedBox(height: 10,),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            StrokeText(
+          text: "I'm a ",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.white.withOpacity(0),
+          strokeWidth: 1.5,
+        ),
+        StrokeText(
+          text: "Full Stack Dev",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.yellowAccent,
+          strokeWidth: 1.5,
+        ),
+          ],
+        ),
+        SizedBox(height: 10,),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            StrokeText(
+          text: "I'm a ",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.white.withOpacity(0),
+          strokeWidth: 1.5,
+        ),
+        StrokeText(
+          text: "UI/UX Designer",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.tealAccent,
+          strokeWidth: 1.5,
+        ),
+          ],
+        ),
+        SizedBox(height: 15,),
+        Text.rich(
+          TextSpan(
             style: kEpilogueTextStyle(context)
-                .copyWith(fontSize: 20, fontWeight: FontWeight.bold)),
+                .copyWith(fontSize: 20, fontWeight: FontWeight.bold),
+            children: <TextSpan>[
+           
+             
+    
+              TextSpan(
+                text: '\n',
+                children: [
+                  TextSpan(
+                    text: "I'm a ",
+                    style: kEpilogueTextStyle(context).copyWith(fontSize: 40)
+                  ),
+                  TextSpan(
+                    text: "Founder",
+                    style: kEpilogueTextStyle(context)
+                        .copyWith(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.greenAccent,decoration: TextDecoration.underline),
+                  ),
+                ]
+              ),
+              TextSpan(
+                text: '\n',
+                children: [
+                  TextSpan(
+                    text: "I'm a ",
+                    style: kEpilogueTextStyle(context).copyWith(color: Colors.amber.withOpacity(0),fontSize: 40)
+                  ),
+                  TextSpan(
+                    text: "AI/ML Engineer",
+                    style: kEpilogueTextStyle(context)
+                        .copyWith(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.orangeAccent.withOpacity(0)),
+                  ),
+                ]
+              ),
+            ],
+          ),
+        ),
+
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            StrokeText(
+          text: "I'm a ",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.white.withOpacity(0),
+          strokeWidth: 1.5,
+        ),
+        StrokeText(
+          text: "AI/ML Engineer",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.orangeAccent,
+          strokeWidth: 1.5,
+        ),
+          ],
+        ),
+                       SizedBox(height: 10,),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            StrokeText(
+          text: "I'm a ",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.white.withOpacity(0),
+          strokeWidth: 1.5,
+        ),
+        StrokeText(
+          text: "Web3 Developer",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.blueGrey.shade300,
+          strokeWidth: 1.5,
+        ),
+          ],
+        ),
+               SizedBox(height: 10,),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            StrokeText(
+          text: "I'm a ",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.white.withOpacity(0),
+          strokeWidth: 1.5,
+        ),
+        StrokeText(
+          text: "Mobile App Dev",
+          textStyle: kEpilogueTextStyle(context,opacity: 0.0).copyWith(fontSize: 40),
+          strokeColor: Colors.blue.shade300,
+          strokeWidth: 1.5,
+        ),
+          ],
+        ),
         const SizedBox(
           height: 20,
         ),
 
-        ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: Image.asset(
-              'assets/let_him_cook.gif',
-              fit: BoxFit.cover,
-            )),
+        // ClipRRect(
+        //     borderRadius: BorderRadius.circular(20),
+        //     child: Image.asset(
+        //       'assets/let_him_cook.gif',
+        //       fit: BoxFit.cover,
+        //     )),
         const PageEndSpacer()
       ]),
     );

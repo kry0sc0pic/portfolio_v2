@@ -41,7 +41,7 @@ class _ExperienceCardState extends State<ExperienceCard> {
                 .copyWith(fontWeight: FontWeight.bold, letterSpacing: 0.2)),
         visualDensity: VisualDensity.comfortable,
         subtitle: Text(widget.experience.role,
-            style: kManropeTextStyle(context, opacity: 0.7)),
+            style: kManropeTextStyle(context, opacity: 0.7).copyWith(fontWeight: FontWeight.bold)),
         leading: CircleAvatar(
             backgroundColor: widget.experience.color,
             child: Container(

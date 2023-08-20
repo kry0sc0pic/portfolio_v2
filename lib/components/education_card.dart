@@ -43,7 +43,7 @@ class _EducationCardState extends State<EducationCard> {
                 .copyWith(fontWeight: FontWeight.bold, letterSpacing: 0.2)),
         visualDensity: VisualDensity.comfortable,
         subtitle: Text(widget.education.degree,
-            style: kManropeTextStyle(context, opacity: 0.7)),
+            style: kManropeTextStyle(context, opacity: 0.7).copyWith(fontWeight: FontWeight.bold)),
         leading: CircleAvatar(
           backgroundColor: widget.education.color,
           child: widget.education.image == null
